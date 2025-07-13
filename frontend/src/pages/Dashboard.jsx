@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { axiosWiithAuth } from "../api/axiosWithAuth";
 import TodoCard from "../components/TodoCard";
 import "../styles/dashboard.css";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
   const [todos, setTodos] = useState([]);
@@ -15,7 +16,7 @@ const Dashboard = () => {
       try {
         const response = await axiosWiithAuth({
           method: "get",
-          url: "http://localhost:5001/todo/",
+          url: `${BASE_URL}/todo/`,
         });
         setTodos([...response]);
       } catch (error) {
@@ -37,7 +38,7 @@ const Dashboard = () => {
     try {
       await axiosWiithAuth({
         method: "delete",
-        url: `http://localhost:5001/todo/${todoId}`,
+        url: `${BASE_URL}/todo/${todoId}`,
       });
       setTodos((prev) => prev.filter((todo) => todo._id !== todoId));
     } catch (error) {
@@ -50,7 +51,7 @@ const Dashboard = () => {
     try {
       await axiosWiithAuth({
         method: "put",
-        url: `http://localhost:5001/todo/${todoId}`,
+        url: `${BASE_URL}/todo/${todoId}`,
         data: {
           completed: !currentStatus,
         },

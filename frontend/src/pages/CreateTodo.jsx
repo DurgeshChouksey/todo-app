@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { axiosWiithAuth } from "../api/axiosWithAuth";
 import "../styles/create-edit.css";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const CreateTodo = () => {
   const { id } = useParams(); // To check if we're editing or creating a todo
@@ -21,7 +22,7 @@ const CreateTodo = () => {
         try {
           const response = await axiosWiithAuth({
             method: "get",
-            url: `http://localhost:5001/todo/${id}`,
+            url: `${BASE_URL}/todo/${id}`,
           });
 
           const todo = response;
@@ -53,14 +54,14 @@ const CreateTodo = () => {
         // PUT request for update
         await axiosWiithAuth({
           method: "put",
-          url: `http://localhost:5001/todo/${id}`,
+          url: `${BASE_URL}/todo/${id}`,
           data: payload,
         });
       } else {
         // POST request for new todo
         await axiosWiithAuth({
           method: "post",
-          url: "http://localhost:5001/todo/",
+          url: `${BASE_URL}/todo`,
           data: payload,
         });
       }

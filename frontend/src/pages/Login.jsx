@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/login.css";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const Login = () => {
     // State to show error or success messages
@@ -18,7 +19,7 @@ const Login = () => {
 
         try {
             // Send login request to backend
-            const response = await axios.post("http://localhost:5001/user/login", {
+            const response = await axios.post(`${BASE_URL}/login`, {
                 username,
                 password
             }, {

@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Custom axios wrapper to handle token-based authentication + auto-refresh
 export const axiosWiithAuth = async (config) => {
-  const BASE_URL = "http://localhost:5001";
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   // Step 1: Get token from localStorage
   const userInfoRaw = localStorage.getItem("userInfo");

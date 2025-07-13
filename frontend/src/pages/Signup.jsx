@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import "../styles/signup.css";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const Signup = () => {
     // State for handling user messages and message type
@@ -16,12 +17,9 @@ const Signup = () => {
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
 
-        // Log inputs (for debugging only — remove in production)
-        console.log(username, email, password);
-
         try {
             // API request to signup endpoint
-            const response = await axios.post("http://localhost:5001/user/signup", {
+            const response = await axios.post(`${BASE_URL}/signup`, {
                 username,
                 email,
                 password
