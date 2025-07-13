@@ -1,0 +1,169 @@
+/* ================= DESKTOP STYLES ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2B2D42;
+  border-bottom: 1px solid #222;
+  color: #F7ECE1;
+  border-radius: 8px;
+}
+
+.dashboard-title {
+  text-align: center;
+  width: 100%;
+}
+
+/* Controls and Buttons */
+.dashboard-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-controls span {
+  color: #F7ECE1;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.dashboard-nav-button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-nav-button-group button {
+  background-color: #A4B0F5;
+  border: none;
+  color: #2B2D42;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Todo Info */
+.description {
+  font-size: 30px;
+}
+
+.priority {
+  font-size: 20px;
+}
+
+.date {
+  font-size: 18px;
+}
+
+.category-tag {
+  font-size: 18px;
+}
+
+/* Special Button Styles */
+.delete {
+  background-color: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.completed {
+  background-color: transparent;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+}
+
+/* ================= TABLET STYLES ================= */
+
+@media (max-width: 768px) {
+  body {
+    padding-inline: 10px;
+  }
+
+  .signup_container,
+  .login_container,
+  .create-todo-container {
+    padding: 30px 20px;
+  }
+
+  .description,
+  .priority,
+  .date,
+  .category-tag,
+  .dashboard-controls button {
+    font-size: 16px !important;
+  }
+}
+
+/* ================= MOBILE STYLES ================= */
+
+@media (max-width: 480px) {
+  body {
+    padding-inline: 6px;
+  }
+
+  .signup_container,
+  .login_container,
+  .create-todo-container {
+    padding: 20px 15px;
+  }
+
+  .dashboard-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard-controls {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dashboard-controls span {
+    font-size: 18px !important;
+  }
+
+  .dashboard-controls button {
+    font-size: 14px !important;
+    padding: 6px 10px;
+  }
+
+  .description,
+  .priority,
+  .date,
+  .category-tag {
+    font-size: 14px !important;
+  }
+
+  .category-tag {
+    font-size: 9px !important;
+    border-radius: 12px;
+    background-color: #CAC4CE;
+    color: #2B2D42;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 0.7rem;
+  }
+}

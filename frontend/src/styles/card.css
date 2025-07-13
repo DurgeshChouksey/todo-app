@@ -1,0 +1,171 @@
+/* ================= DESKTOP STYLES ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Reset margin for all <p> tags inside cards */
+p {
+  margin-block: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main card container */
+.todo-container {
+  background-color: #2B2D42;
+  border: 1px solid #8D86C9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  color: #F7ECE1;
+}
+
+.todo-container:hover {
+  transform: scale(1.01);
+}
+
+/* Header row */
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  color: #A4B0F5;
+}
+
+.priority {
+  font-size: 20px;
+  font-weight: 500;
+  color: #F7ECE1;
+}
+
+/* Description */
+.description {
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+  color: #F7ECE1;
+}
+
+/* Tags */
+.categories.aligned-left,
+.categories.aligned-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.category-tag {
+  background-color: #CAC4CE;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 18px;
+  color: #2B2D42;
+}
+
+/* Action buttons */
+.button-group.aligned-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 10px;
+  margin-top: 13px;
+}
+
+.delete,
+.completed {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #A4B0F5 !important;
+  color: #2B2D42 !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Date shown at bottom */
+.date.centered {
+  font-size: 18px;
+  color: #F7ECE1;
+  text-align: right;
+}
+
+/* ================= TABLET STYLES ================= */
+
+@media (max-width: 768px) {
+  .description,
+  .priority,
+  .date,
+  .category-tag,
+  .dashboard-controls button {
+    font-size: 16px !important;
+  }
+}
+
+/* ================= MOBILE STYLES ================= */
+
+@media (max-width: 480px) {
+  .description,
+  .priority,
+  .date,
+  .category-tag,
+  .dashboard-controls button {
+    font-size: 14px !important;
+  }
+
+  .delete,
+  .completed {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  .footer_wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .delete_cat_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+
+  .categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .date {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

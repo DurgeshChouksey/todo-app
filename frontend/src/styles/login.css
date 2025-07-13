@@ -1,0 +1,110 @@
+/* ================= DESKTOP STYLES ================= */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.login_container {
+  background-color: #2B2D42;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  color: #F7ECE1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login_container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #CAC4CE;
+  color: #2B2D42;
+  box-sizing: border-box;
+}
+
+.login_container input::placeholder {
+  color: #766667;
+}
+
+.login_container button {
+  width: 100%;
+  padding: 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #A4B0F5;
+  color: #2B2D42;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login_container button:hover {
+  background-color: #8e9dea;
+}
+
+.login_container p {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login_container a {
+  display: block;
+  margin-top: 12px;
+  color: #3498db;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Feedback messages */
+.success-message {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #00d084;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #e74c3c;
+  text-align: center;
+}
+
+/* --------------- TABLET STYLES (max-width: 768px) --------------- */
+
+@media (max-width: 768px) {
+  .login_container {
+    padding: 30px 20px;
+  }
+
+  .login_container input,
+  .login_container button {
+    font-size: 16px;
+  }
+}
+
+/* --------------- MOBILE STYLES (max-width: 480px) --------------- */
+
+@media (max-width: 480px) {
+  .login_container {
+    padding: 20px 15px;
+  }
+
+  .login_container input,
+  .login_container button,
+  .login_container a,
+  .login_container p {
+    font-size: 14px !important;
+  }
+}
