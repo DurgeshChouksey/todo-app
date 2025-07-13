@@ -19,7 +19,7 @@ const Signup = () => {
 
         try {
             // API request to signup endpoint
-            const response = await axios.post(`${BASE_URL}/signup`, {
+            const response = await axios.post(`${BASE_URL}/user/signup`, {
                 username,
                 email,
                 password

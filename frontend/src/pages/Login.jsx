@@ -19,7 +19,7 @@ const Login = () => {
 
         try {
             // Send login request to backend
-            const response = await axios.post(`${BASE_URL}/login`, {
+            const response = await axios.post(`${BASE_URL}/user/login`, {
                 username,
                 password
             }, {
