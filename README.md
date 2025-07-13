@@ -6,6 +6,14 @@ This project supports **user authentication**, **secure token refresh flow**, an
 
 ---
 
+## 🔗 Live Demo
+
+👉 [Click here to try the app](https://todo-app-omega-liard.vercel.app)
+
+This is the live deployed version of the Todo App frontend, powered by Vercel and connected to a live Railway backend.
+
+---
+
 ## 🚀 Features
 
 - ✅ User Signup & Login with JWT authentication
