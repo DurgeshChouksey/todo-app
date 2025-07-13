@@ -96,7 +96,7 @@ const loginRoute = asyncHandler(async (req, res, next) => {
             userId: user._id
         }
         }, process.env.ACCESS_SECRET,
-        {expiresIn: "10s"}
+        {expiresIn: "10m"}
     );
 
     // res.clearCookie("refreshToken", {
@@ -126,7 +126,7 @@ const tokenRefreshRoute = asyncHandler(async (req, res, next) => {
    try {
         const decode = jwt.verify(refreshToken, process.env.REFRESH_SECRET)
         user = decode.user;
-        const accessToken = jwt.sign({user}, process.env.ACCESS_SECRET, {expiresIn: "10s"});
+        const accessToken = jwt.sign({user}, process.env.ACCESS_SECRET, {expiresIn: "10m"});
         res.status(200).json({ token: accessToken, user });
    } catch (error) {
         res.status(401);
