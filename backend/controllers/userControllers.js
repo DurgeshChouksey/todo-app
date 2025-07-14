@@ -106,7 +106,8 @@ const loginRoute = asyncHandler(async (req, res, next) => {
     // });
     res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        secure: false,
+        secure: true,
+        sameSite: "None",
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7days in miliseconds
     }).status(200).json({token: accessToken, user: {
         username: user.username,
