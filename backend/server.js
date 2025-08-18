@@ -14,10 +14,11 @@ const app = express();
 // middlewares
 app.use(express.json());
 app.use(cors({
-    origin : ["http://localhost:5173", "https://todo-app-omega-liard.vercel.app"],
+    origin : ["https://todo-app-omega-liard.vercel.app", "http://localhost:5173"],
     credentials: true
 }))
 app.use(cookieParser());
+
 
 // routes
 app.use("/user", userRoutes);
